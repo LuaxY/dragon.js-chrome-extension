@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Dragon.js",
+	"author": "Tommy Hodgins",
+    "description": "drag any element on a website using a mouse or touchscreen",
+    "version": "1.0",
+    "icons": {
+        "16": "icon16.png",
+        "128": "icon128.png" },
+    "permissions": [
+      "contextMenus"
+    ],
+  "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["dragon.js"]
+        }
+    ],
+    "background": {
+        "persistent": true,
+        "scripts": ["dragonbg.js"]
+    }
+  }
